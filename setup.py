@@ -24,5 +24,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'django-tastypie==0.11.0',
+        'django-blog-zinnia==0.14.3',
+        'django_extended_flatpages==0.1',
     ]
 )

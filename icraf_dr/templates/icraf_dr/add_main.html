@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ICRAF DR</title>
+    </head>
+
+    <body>
+        <h1>Add Main</h1>
+
+        <form id="main_form" enctype="multipart/form-data" method="post" action="/icraf_dr/add_main">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text }}
+                {{ field }}<br>
+            {% endfor %}
+
+            <input type="submit" name="submit" value="Create Main">
+        </form>
+    </body>
+</html>
