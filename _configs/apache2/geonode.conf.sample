@@ -1,0 +1,40 @@
+WSGIDaemonProcess geonode python-path=/usr/local/lib/python2.7/dist-packages user=www-data threads=15 processes=2
+
+<VirtualHost *:80>
+    ServerName 192.168.0.207
+    #ServerAlias geonode.*.xip.io
+    ServerAdmin admin@localhost.com
+    DocumentRoot /var/www/geonode/geonode
+
+    ErrorLog /var/log/apache2/error.log
+    LogLevel warn
+    CustomLog /var/log/apache2/access.log combined
+
+    WSGIProcessGroup geonode
+    WSGIPassAuthorization On
+    WSGIScriptAlias / /var/www/my_geonode/my_geonode/wsgi.py
+
+    <Directory "/var/www/geonode/geonode/">
+        #Order allow,deny
+        #for apache 2.4 http://stackoverflow.com/questions/21551840/forbidden-you-dont-have-permission-to-access-on-this-server
+        Require all granted
+        Options Indexes FollowSymLinks
+        #Allow from all
+        IndexOptions FancyIndexing
+    </Directory>
+
+    Alias /static/ /var/www/geonode/geonode/static_root/
+    Alias /uploaded/ /var/www/geonode/geonode/uploaded/
+    Alias /robots.txt /var/www/geonode/geonode/static_root/robots.txt
+
+    <Proxy *>
+        #Order allow,deny
+        #Allow from all
+        Require all granted
+    </Proxy>
+
+    ProxyPreserveHost On
+    ProxyPass /geoserver http://localhost:8080/geoserver
+    ProxyPassReverse /geoserver http://localhost:8080/geoserver
+
+</VirtualHost>

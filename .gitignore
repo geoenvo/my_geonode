@@ -1,2 +1,3 @@
 *.pyc
 *.egg-info
+my_geonode/local_settings.py
