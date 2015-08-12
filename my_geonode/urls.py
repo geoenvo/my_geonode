@@ -12,7 +12,7 @@ urlpatterns = patterns('',
    # zinnia blog app
    url(r'^blog/', include('zinnia.urls', namespace='zinnia')),
    url(r'^comments/', include('django_comments.urls')),
-   # django extended flatpages
+   # django extended flatpages app
    url(r'^pages/', include('django.contrib.flatpages.urls')),
    url(r'^ckeditor/', include('ckeditor.urls')),
  ) + urlpatterns
