@@ -102,3 +102,9 @@ body > div.x-panel #paneltbar {
 body.documents article.ng-scope img.thumb {
     width: 240px;
 }
+
+/* Metadata form */
+body.data #category_form .control-label {
+    display: block;
+    text-align: left;
+}
