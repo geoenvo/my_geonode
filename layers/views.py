@@ -9,7 +9,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.conf import settings
 from django.template import RequestContext
 from django.utils.translation import ugettext as _
@@ -93,12 +93,31 @@ def _resolve_layer(request, typename, permission='base.view_resourcebase',
 @login_required
 def layer_upload(request, template='layer_upload.html'):
     if request.method == 'GET':
+        layer_attribute_set = inlineformset_factory(
+            Layer,
+            Attribute,
+            extra=0,
+            form=LayerAttributeForm,
+        )
+
+        layer_form = LayerForm( prefix="resource")
+        attribute_form = layer_attribute_set(
+            prefix="layer_attribute_set",
+            queryset=Attribute.objects.order_by('display_order'))
+        category_form = CategoryForm(
+            prefix="category_choice_field",
+            initial=None)
+
         ctx = {
             'charsets': CHARSETS,
             'is_layer': True,
+            'layer_form': layer_form,
+            'attribute_form': attribute_form,
+            'category_form': category_form,
         }
-        return render_to_response(template,
-                                  RequestContext(request, ctx))
+
+        return render(request, template, ctx)
+
     elif request.method == 'POST':
         form = NewLayerUploadForm(request.POST, request.FILES)
         tempdir = None
@@ -225,6 +244,7 @@ def layer_metadata(request, layername, template='layers/layer_metadata.html'):
             prefix="category_choice_field",
             initial=topic_category.id if topic_category else None)
 
+
     if request.method == "POST" and layer_form.is_valid(
     ) and attribute_form.is_valid() and category_form.is_valid():
         new_poc = layer_form.cleaned_data['poc']
@@ -301,13 +321,15 @@ def layer_metadata(request, layername, template='layers/layer_metadata.html'):
         author_form = ProfileForm(prefix="author")
         author_form.hidden = True
 
-    return render_to_response(template, RequestContext(request, {
+    ctx = {
         "layer": layer,
         "layer_form": layer_form,
         "poc_form": poc_form,
         "author_form": author_form,
         "attribute_form": attribute_form,
         "category_form": category_form,
-    }))
+    }
+
+    return render(request, template, ctx)
 
 
