@@ -30,6 +30,7 @@ SITENAME = 'my_geonode'
 # Defines the directory that contains the settings file as the LOCAL_ROOT
 # It is used for relative settings elsewhere.
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
+GEONODE_ROOT = os.path.abspath('../geonode/geonode')
 
 WSGI_APPLICATION = "my_geonode.wsgi.application"
 
@@ -49,6 +50,7 @@ STATICFILES_DIRS.append(
 # INSTALLED_APPS, se there is no need to add maps/templates or admin/templates
 TEMPLATE_DIRS = (
     os.path.join(LOCAL_ROOT, "templates"),
+    os.path.join(GEONODE_ROOT, "layers/templates"),
 ) + TEMPLATE_DIRS
 
 # Location of url mappings
