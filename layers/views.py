@@ -20,7 +20,7 @@ from django.forms.models import inlineformset_factory
 from django.db.models import F
 
 from geonode.services.models import Service
-from geonode.layers.forms import LayerForm, LayerUploadForm, NewLayerUploadForm, LayerAttributeForm
+from geonode.layers.forms import LayerUploadForm, NewLayerUploadForm, LayerAttributeForm
 from geonode.base.forms import CategoryForm
 from geonode.layers.models import Layer, Attribute, UploadSession
 from geonode.base.enumerations import CHARSETS
@@ -32,6 +32,7 @@ from geonode.people.forms import ProfileForm, PocForm
 from geonode.security.views import _perms_info_json
 from geonode.documents.models import get_related_documents
 
+from .forms import LayerForm
 
 CONTEXT_LOG_FILE = None
 
