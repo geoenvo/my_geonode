@@ -3,23 +3,19 @@ import sys
 import logging
 import shutil
 import traceback
-from guardian.shortcuts import get_perms
 
-from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.conf import settings
-from django.template import RequestContext
 from django.utils.translation import ugettext as _
 from django.utils import simplejson as json
 from django.utils.html import escape
 from django.template.defaultfilters import slugify
 from django.forms.models import inlineformset_factory
-from django.db.models import F
 
-from geonode.services.models import Service
+
 from geonode.layers.forms import LayerUploadForm, NewLayerUploadForm, LayerAttributeForm
 from geonode.base.forms import CategoryForm
 from geonode.layers.models import Layer, Attribute, UploadSession
@@ -27,10 +23,8 @@ from geonode.base.enumerations import CHARSETS
 from geonode.base.models import TopicCategory
 
 from geonode.layers.utils import file_upload, is_raster, is_vector
-from geonode.utils import resolve_object, llbbox_to_mercator
+from geonode.layers.views import _resolve_layer
 from geonode.people.forms import ProfileForm, PocForm
-from geonode.security.views import _perms_info_json
-from geonode.documents.models import get_related_documents
 
 from .forms import LayerForm
 
@@ -42,13 +36,8 @@ if 'geonode.geoserver' in settings.INSTALLED_APPS:
 
 logger = logging.getLogger("layers.views")
 
-GENERIC_UPLOAD_ERROR = _("There was an error while attempting to upload your data. \
-Please try again, or contact and administrator if the problem continues.")
-
-_PERMISSION_MSG_GENERIC = _('You do not have permissions for this layer.')
 _PERMISSION_MSG_METADATA = _(
     "You are not permitted to modify this layer's metadata")
-_PERMISSION_MSG_VIEW = _("You are not permitted to view this layer")
 
 
 def log_snippet(log_file):
@@ -61,31 +50,6 @@ def log_snippet(log_file):
         f.seek(max(fsize - 10024, 0), 0)  # Set pos @ last n chars
         return f.read()
 
-
-def _resolve_layer(request, typename, permission='base.view_resourcebase',
-                   msg=_PERMISSION_MSG_GENERIC, **kwargs):
-    """
-    Resolve the layer by the provided typename (which may include service name) and check the optional permission.
-    """
-    service_typename = typename.split(":", 1)
-
-    if Service.objects.filter(name=service_typename[0]).exists():
-        service = Service.objects.filter(name=service_typename[0])
-        return resolve_object(request,
-                              Layer,
-                              {'service': service[0],
-                               'typename': service_typename[1] if service[0].method != "C" else typename},
-                              permission=permission,
-                              permission_msg=msg,
-                              **kwargs)
-    else:
-        return resolve_object(request,
-                              Layer,
-                              {'typename': typename,
-                               'service': None},
-                              permission=permission,
-                              permission_msg=msg,
-                              **kwargs)
 
 
 # Basic Layer Views #
