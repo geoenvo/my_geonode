@@ -1,0 +1,86 @@
+[
+    {
+        "pk": 2,
+        "model": "auth.group",
+        "fields": {
+            "name": "Pengelola-Data-Kabupaten"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "groups.groupprofile",
+        "fields": {
+            "group": 2,
+            "title": "Pengelola Data Kabupaten",
+            "slug": "Pengelola-Data-Kabupaten",
+            "description": "Pengelola Data Kabupaten",
+            "access": "public",
+            "last_modified": "2015-08-17 10:00:00"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "groups.groupmember",
+        "fields": {
+            "group": 1,
+            "user": 1,
+            "role": "manager"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "auth.group",
+        "fields": {
+            "name": "Pemantau-dan-Evaluator"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "groups.groupprofile",
+        "fields": {
+            "group": 3,
+            "title": "Pemantau dan Evaluator",
+            "slug": "Pemantau-dan-Evaluator",
+            "description": "Pemantau dan Evaluator",
+            "access": "public",
+            "last_modified": "2015-08-17 10:00:00"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "groups.groupmember",
+        "fields": {
+            "group": 2,
+            "user": 1,
+            "role": "manager"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "auth.group",
+        "fields": {
+            "name": "Pengelola-Basis-Data"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "groups.groupprofile",
+        "fields": {
+            "group": 4,
+            "title": "Pengelola Basis Data",
+            "slug": "Pengelola-Basis-Data",
+            "description": "Pengelola Basis Data",
+            "access": "public",
+            "last_modified": "2015-08-17 10:00:00"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "groups.groupmember",
+        "fields": {
+            "group": 3,
+            "user": 1,
+            "role": "manager"
+        }
+    }
+]
