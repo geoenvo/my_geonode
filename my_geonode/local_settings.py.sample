@@ -92,7 +92,7 @@ DATABASES = {
     'datastore' : {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         #'ENGINE': '', # Empty ENGINE name disables 
-        'NAME': 'geonode',
+        'NAME': 'geonode-imports',
         'USER' : 'geonode',
         'PASSWORD' : 'password',
         'HOST' : 'localhost',
