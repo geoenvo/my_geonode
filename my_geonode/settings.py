@@ -42,7 +42,8 @@ except ImportError:
     pass
 
 # Additional directories which hold static files
-STATICFILES_DIRS.append(
+STATICFILES_DIRS.insert(
+    0,
     os.path.join(LOCAL_ROOT, "static"),
 )
 
