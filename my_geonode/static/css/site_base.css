@@ -33,6 +33,12 @@
     font-weight: bold;
 }
 
+@media (min-width:992px) {
+    #search.navbar-form .col-md-4 {
+        width: 30%;
+    }
+}
+
 /* Carousel base class */
 .carousel {
     height: 300px;
