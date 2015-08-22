@@ -21,10 +21,22 @@
 
   <div id="upload-section1" class="col-md-8">
     {% include "layer_upload_files.html" %}
+    <section class="buttons">
+      <a href="#" id="clear-button" class="btn btn-default">{% trans "Clear" %}</a>
+      <a href="#" id="goToSection2" class="btn btn-danger">{% trans "Next" %}</a>
+    </section>
   </div>
   
   <div id="upload-section2" class="col-md-8">
     {% include "layer_upload_metadata.html" %}
+    <section class="buttons">
+      <a href="#" id="goToSection1" class="btn btn-default">{% trans "Prev" %}</a>
+      {% if GEONODE_SECURITY_ENABLED %}
+        <a href="#" id="goToSection3" class="btn btn-danger">{% trans "Next" %}</a>
+      {% else %}
+        <a href="#" id="upload-button" class="btn btn-danger">{% trans "Upload files" %}</a>
+      {% endif %}
+    </section>
   </div>
 
   {% if GEONODE_SECURITY_ENABLED %}
@@ -33,6 +45,9 @@
       <form id="permission_form">
         {% include "_permissions.html" %}
       </form>
+      <section class="buttons">
+        <a href="#" id="upload-button" class="btn btn-danger">{% trans "Upload files" %}</a>
+      </section>
     </div>
   {% endif %}
 </div>
