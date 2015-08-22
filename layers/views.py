@@ -56,7 +56,7 @@ def log_snippet(log_file):
 
 
 @login_required
-def layer_upload(request, template='layer_upload.html'):
+def layer_upload(request, template='upload/index.html'):
     if request.method == 'GET':
         layer_attribute_set = inlineformset_factory(
             Layer,

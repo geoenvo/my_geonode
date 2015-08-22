@@ -27,16 +27,6 @@
 
 {% block additional_info %}{% endblock %}
 
-{% if errors %}
-<div id="errors" class="alert alert-danger">
-  {% for error in errors %}
-  <p>{{ error }}</p>
-  {% endfor %}
-</div>
-{% endif %}
-
-<div id="upload-status"></div>
-
 <section id="drop-zone">
   <h3><i class="fa fa-cloud-upload"></i><br />{% trans "Drop files here" %}</h3>
 </section>
