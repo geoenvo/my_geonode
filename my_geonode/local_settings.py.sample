@@ -11,6 +11,9 @@ EMAIL_HOST_USER = 'geonodeemail@gmail.com'
 EMAIL_HOST_PASSWORD = 'geonodeemailpassword'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+DEBUG = TEMPLATE_DEBUG = False
+DEBUG_STATIC = False
+RESOURCE_PUBLISHING = True
 
 INSTALLED_APPS = (
     'icraf_dr',
