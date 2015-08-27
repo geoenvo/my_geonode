@@ -3,6 +3,8 @@ from geonode.settings import *
 
 SITENAME = 'GEONODE'
 SITEURL = 'http://192.168.0.207/'
+TIME_ZONE = 'Asia/Jakarta'
+LANGUAGE_CODE = 'id'
 REGISTRATION_OPEN = False
 ACCOUNT_ACTIVATION_DAYS = 7
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

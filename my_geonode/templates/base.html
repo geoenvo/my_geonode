@@ -1,4 +1,4 @@
-{% load i18n avatar_tags %}
+{% load i18n avatar_tags flatpages %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,9 +55,16 @@
             <li>
               <a href="{% url "home" %}">{% trans "Home" %}</a>
             </li>
+            
+            {% get_flatpages '/pages/about/' as page_exists %}
+            {% if page_exists %}
+            {% with page_exists|first as the_page %}
             <li>
-              <a href="{% url "home" %}pages/about/">{% trans "About" %}</a>
+              <a href="{% url "home" %}{{ the_page.url }}">{% trans "About" %}</a>
             </li>
+            {% endwith %}
+            {% endif %}
+            
             <li id="nav_layers">
               <a href="{% url "layer_browse" %}">{% trans "Spatial Data" %}</a>
             </li>
@@ -72,12 +79,25 @@
             <li id="nav_documents">
               <a href="{% url "document_browse" %}">{% trans "Documents" %}</a>
             </li>
+            
+            {% get_flatpages '/pages/projects/' as page_exists %}
+            {% if page_exists %}
+            {% with page_exists|first as the_page %}
             <li>
-              <a href="{% url "home" %}pages/projects/">{% trans "Projects" %}</a>
+              <a href="{% url "home" %}{{ the_page.url }}">{% trans "Projects" %}</a>
             </li>
+            {% endwith %}
+            {% endif %}
+            
+            {% get_flatpages '/pages/tools/' as page_exists %}
+            {% if page_exists %}
+            {% with page_exists|first as the_page %}
             <li>
-              <a href="{% url "home" %}pages/tools/">{% trans "Tools" %}</a>
+              <a href="{% url "home" %}{{ the_page.url }}">{% trans "Tools" %}</a>
             </li>
+            {% endwith %}
+            {% endif %}
+            
             <!--
             <li id="nav_people">
               <a href="{% url "profile_browse" %}">{% trans "People" %}</a>
@@ -122,11 +142,14 @@
               </a>
             </li>
             {% endif %}
+            {% get_flatpages '/pages/help/' as page_exists %}
+            {% if page_exists %}
+            {% with page_exists|first as the_page %}
             <li>
-              <a href="{% url "home" %}pages/help/">
-                {% trans "Help" %} 
-              </a>
+              <a href="{% url "home" %}{{ the_page.url }}">{% trans "Help" %}</a>
             </li>
+            {% endwith %}
+            {% endif %}
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -169,7 +192,6 @@
             <a href="{% url "developer" %}">{% trans "Developers" %}</a> |
             <a href="{% url "about" %}">{% trans "About" %}</a>
             -->
-            {% load flatpages %}
             {% get_flatpages as flatpages %}
             <ul id="flatpages">
                 <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
@@ -179,7 +201,9 @@
                 {% if page.url != "/pages/about/" %}
                 {% if page.url != "/pages/projects/" %}
                 {% if page.url != "/pages/tools/" %}
+                {% if page.url != "/pages/help/" %}
                 <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endif %}
                 {% endif %}
                 {% endif %}
                 {% endif %}
