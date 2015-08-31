@@ -60,7 +60,7 @@
             {% if page_exists %}
             {% with page_exists|first as the_page %}
             <li>
-              <a href="{% url "home" %}{{ the_page.url }}">{% trans "About" %}</a>
+              <a href="{{ the_page.url }}">{% trans "About" %}</a>
             </li>
             {% endwith %}
             {% endif %}
@@ -84,7 +84,7 @@
             {% if page_exists %}
             {% with page_exists|first as the_page %}
             <li>
-              <a href="{% url "home" %}{{ the_page.url }}">{% trans "Projects" %}</a>
+              <a href="{{ the_page.url }}">{% trans "Projects" %}</a>
             </li>
             {% endwith %}
             {% endif %}
@@ -93,7 +93,7 @@
             {% if page_exists %}
             {% with page_exists|first as the_page %}
             <li>
-              <a href="{% url "home" %}{{ the_page.url }}">{% trans "Tools" %}</a>
+              <a href="{{ the_page.url }}">{% trans "Tools" %}</a>
             </li>
             {% endwith %}
             {% endif %}
@@ -146,7 +146,7 @@
             {% if page_exists %}
             {% with page_exists|first as the_page %}
             <li>
-              <a href="{% url "home" %}{{ the_page.url }}">{% trans "Help" %}</a>
+              <a href="{{ the_page.url }}">{% trans "Help" %}</a>
             </li>
             {% endwith %}
             {% endif %}
