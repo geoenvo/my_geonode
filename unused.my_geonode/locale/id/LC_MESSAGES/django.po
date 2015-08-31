@@ -1,0 +1,337 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-27 18:43+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: templates/base.html:56
+msgid "Home"
+msgstr ""
+
+#: templates/base.html:63 templates/base.html.py:193
+msgid "About"
+msgstr ""
+
+#: templates/base.html:69
+msgid "Spatial Data"
+msgstr "Data Spasial"
+
+#: templates/base.html:73 templates/site_index.html:39
+msgid "Layers"
+msgstr ""
+
+#: templates/base.html:77 templates/site_index.html:54
+msgid "Maps"
+msgstr ""
+
+#: templates/base.html:80
+msgid "Documents"
+msgstr ""
+
+#: templates/base.html:87
+msgid "Projects"
+msgstr "Proyek"
+
+#: templates/base.html:96 templates/zinnia/base.html:85
+msgid "Tools"
+msgstr ""
+
+#: templates/base.html:103 templates/base.html.py:197
+msgid "People"
+msgstr ""
+
+#: templates/base.html:106 templates/base.html.py:198
+msgid "Groups"
+msgstr ""
+
+#: templates/base.html:109 templates/base.html.py:199
+msgid "Blog"
+msgstr ""
+
+#: templates/base.html:130 templates/site_index.html:27
+msgid "Register"
+msgstr ""
+
+#: templates/base.html:141 templates/base.html.py:260
+msgid "Sign in"
+msgstr ""
+
+#: templates/base.html:149 templates/base.html.py:297
+msgid "Help"
+msgstr ""
+
+#: templates/base.html:191
+msgid "Powered by"
+msgstr ""
+
+#: templates/base.html:191
+msgid "GeoNode"
+msgstr ""
+
+#: templates/base.html:191
+msgid "version"
+msgstr ""
+
+#: templates/base.html:192
+msgid "Developers"
+msgstr ""
+
+#: templates/base.html:214
+msgid "Language"
+msgstr ""
+
+#: templates/base.html:248 templates/base.html.py:249
+msgid "Username"
+msgstr ""
+
+#: templates/base.html:252
+msgid "Password"
+msgstr ""
+
+#: templates/base.html:256
+msgid "Remember Me"
+msgstr ""
+
+#: templates/base.html:272
+msgid "Profile Menu"
+msgstr ""
+
+#: templates/base.html:276
+msgid "Upload Layers"
+msgstr ""
+
+#: templates/base.html:278
+msgid "Profile"
+msgstr ""
+
+#: templates/base.html:279
+msgid "Recent Activity"
+msgstr ""
+
+#: templates/base.html:280
+msgid "Inbox"
+msgstr ""
+
+#: templates/base.html:282
+msgid "Notifications"
+msgstr ""
+
+#: templates/base.html:285
+msgid "Announcements"
+msgstr ""
+
+#: templates/base.html:288
+msgid "Remote Services"
+msgstr ""
+
+#: templates/base.html:289
+msgid "Invite User"
+msgstr ""
+
+#: templates/base.html:291
+msgid "GeoServer"
+msgstr ""
+
+#: templates/base.html:294
+msgid "Admin"
+msgstr ""
+
+#: templates/base.html:303 templates/zinnia/base.html:104
+#: templates/zinnia/base.html.py:105
+msgid "Log out"
+msgstr ""
+
+#: templates/base.html:341
+msgid "Type your search here ..."
+msgstr ""
+
+#: templates/index.html:6 templates/zinnia/base.html:28
+msgid "Welcome!"
+msgstr ""
+
+#: templates/index.html:15 templates/site_index.html:22
+#: templates/site_index.html.py:76
+msgid "Welcome"
+msgstr ""
+
+#: templates/index.html:16 templates/site_index.html:23
+#: templates/site_index.html.py:77
+msgid ""
+"GeoNode is an open source platform for sharing geospatial data and maps."
+msgstr ""
+
+#: templates/index.html:17 templates/site_index.html:24
+#: templates/site_index.html.py:78
+msgid ""
+"If you have any questions about the software or service, join our <a href="
+"\"https://groups.google.com/d/forum/geonode-users\">mailing list</a>."
+msgstr ""
+
+#: templates/index.html:18 templates/site_index.html:25
+#: templates/site_index.html.py:79
+msgid "Need help?"
+msgstr ""
+
+#: templates/index.html:18 templates/site_index.html:25
+#: templates/site_index.html.py:79
+msgid "Getting Started"
+msgstr ""
+
+#: templates/index.html:31 templates/index.html.py:41 templates/index.html:52
+#: templates/index.html.py:55
+msgid "No"
+msgstr "0"
+
+#: templates/index.html:31
+msgid "Layer"
+msgid_plural "Layers"
+msgstr[0] "Layer"
+msgstr[1] "Layer"
+
+#: templates/index.html:33
+msgid ""
+"Click to search for geospatial data published by other users, organizations "
+"and public sources. Download data in standard formats."
+msgstr ""
+
+#: templates/index.html:35 templates/site_index.html:43
+msgid "Explore Layers"
+msgstr ""
+
+#: templates/index.html:41
+msgid "Map"
+msgid_plural "Maps"
+msgstr[0] "Peta"
+msgstr[1] "Peta"
+
+#: templates/index.html:43
+msgid ""
+"Data is available for browsing, aggregating and styling to generate maps "
+"which can be shared publicly or restricted to specific users only."
+msgstr ""
+
+#: templates/index.html:45 templates/site_index.html:58
+msgid "Create maps"
+msgstr ""
+
+#: templates/index.html:52
+msgid "User"
+msgid_plural "Users"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/index.html:55
+msgid "Document"
+msgid_plural "Documents"
+msgstr[0] "Dokumen"
+msgstr[1] "Dokumen"
+
+#: templates/index.html:57
+msgid "Upload and share documents in various formats."
+msgstr "Unggah dan berbagi dokumen dalam berbagai format."
+
+#: templates/index.html:59 templates/site_index.html:55
+msgid ""
+"GeoNode allows registered users to easily upload geospatial data in several "
+"formats including shapefile and GeoTiff."
+msgstr ""
+
+#: templates/index.html:60
+msgid "Share data"
+msgstr "Berbagi data"
+
+#: templates/site_index.html:40
+msgid ""
+"Click to search for geospatial data published by other users, organizations "
+"and public sources."
+msgstr ""
+"Klik untuk mencari data geospasial yang diterbitkan oleh pengguna lain, "
+"organisasi dan sumber-sumber publik."
+
+#: templates/site_index.html:41
+msgid "Download data in standard formats."
+msgstr "Download data dalam format standar."
+
+#: templates/zinnia/base.html:16
+msgid "RSS Feed of latest entries"
+msgstr ""
+
+#: templates/zinnia/base.html:17
+msgid "RSS Feed of latest discussions"
+msgstr ""
+
+#: templates/zinnia/base.html:30
+msgid "This simple theme is the default appearance of Zinnia."
+msgstr ""
+
+#: templates/zinnia/base.html:33
+msgid ""
+"Don't hesitate to override the template <strong>zinnia/base.html</strong> to "
+"start <a href='http://docs.django-blog-zinnia.com/en/latest/how-to/"
+"customize_look_and_feel.html'>customizing your Weblog</a>."
+msgstr ""
+
+#: templates/zinnia/base.html:39
+msgid "Categories"
+msgstr ""
+
+#: templates/zinnia/base.html:45
+msgid "Authors"
+msgstr "Penulis"
+
+#: templates/zinnia/base.html:50
+msgid "Calendar"
+msgstr "Kalender"
+
+#: templates/zinnia/base.html:55
+msgid "Tags"
+msgstr "Tag"
+
+#: templates/zinnia/base.html:60
+msgid "Recent entries"
+msgstr "Entri terbaru"
+
+#: templates/zinnia/base.html:64
+msgid "Recent comments"
+msgstr "Komentar terbaru"
+
+#: templates/zinnia/base.html:68
+msgid "Recent linkbacks"
+msgstr "Linkback terbaru"
+
+#: templates/zinnia/base.html:72
+msgid "Random entries"
+msgstr "Entri acak"
+
+#: templates/zinnia/base.html:76
+msgid "Popular entries"
+msgstr "Entri populer"
+
+#: templates/zinnia/base.html:80
+msgid "Archives"
+msgstr "Arsip"
+
+#: templates/zinnia/base.html:89 templates/zinnia/base.html.py:90
+msgid "Dashboard"
+msgstr ""
+
+#: templates/zinnia/base.html:96 templates/zinnia/base.html.py:97
+msgid "Post an entry"
+msgstr ""
+
+#~ msgid "%(the_page.title)s"
+#~ msgstr "Tentang"

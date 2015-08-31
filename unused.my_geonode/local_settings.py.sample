@@ -19,6 +19,7 @@ RESOURCE_PUBLISHING = True
 
 INSTALLED_APPS = (
     'icraf_dr',
+    'layers',
     'django_comments',
     'mptt',
     'tagging',

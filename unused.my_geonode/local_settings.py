@@ -2,7 +2,7 @@ import os
 from geonode.settings import *
 
 SITENAME = 'GEONODE'
-SITEURL = 'http://192.168.0.207/'
+SITEURL = 'http://192.168.0.206/'
 TIME_ZONE = 'Asia/Jakarta'
 LANGUAGE_CODE = 'id'
 REGISTRATION_OPEN = False
@@ -19,6 +19,7 @@ RESOURCE_PUBLISHING = True
 
 INSTALLED_APPS = (
     'icraf_dr',
+    'layers',
     'django_comments',
     'mptt',
     'tagging',
@@ -84,7 +85,7 @@ DOCUMENT_TYPE_MAP = {
     'zip': 'archive',
 }
 
-ALLOWED_HOSTS = ['192.168.0.207']
+ALLOWED_HOSTS = ['192.168.0.206']
 
 DATABASES = {
     'default': {
@@ -110,7 +111,7 @@ OGC_SERVER = {
     'default' : {
         'BACKEND' : 'geonode.geoserver',
         'LOCATION' : 'http://localhost:8080/geoserver/',
-        'PUBLIC_LOCATION' : 'http://192.168.0.207/geoserver/',
+        'PUBLIC_LOCATION' : 'http://192.168.0.206/geoserver/',
         'USER' : 'admin',
         'PASSWORD' : 'geoserver',
         'MAPFISH_PRINT_ENABLED' : True,
