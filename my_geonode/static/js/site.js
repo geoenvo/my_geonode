@@ -23,33 +23,4 @@ $(function() {
             $(this).addClass('active');
     });
 
-    showSection1 = function() {
-        $('#upload-section1').show();
-        $('#upload-section2').hide();
-        $('#upload-section3').hide();
-    };
-
-    showSection2 = function() {
-        $('#upload-section1').hide();
-        $('#upload-section2').show();
-        $('#upload-section3').hide();
-    };
-
-    showSection3 = function() {
-        $('#upload-section1').hide();
-        $('#upload-section2').hide();
-        $('#upload-section3').show();
-    };
-
-    $('#goToSection1').click(function() {
-        showSection1();
-    });
-    $('#goToSection2').click(function() {
-        showSection2();
-    });
-    $('#goToSection3').click(function() {
-        showSection3();
-    });
-    showSection1();
-
 });
