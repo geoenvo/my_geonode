@@ -22,5 +22,19 @@ $(function() {
         if (matched_links)
             $(this).addClass('active');
     });
-
+    
+    // select all textbox content on click/focus
+    $('input.select-all').on('focus', function() {
+        var $this = $(this)
+        .one('mouseup.mouseupSelect', function() {
+            $this.select();
+            return false;
+        })
+        .one('mousedown', function() {
+            // compensate for untriggered 'mouseup' caused by focus via tab
+            $this.off('mouseup.mouseupSelect');
+        })
+        .select();
+    });
+    
 });
