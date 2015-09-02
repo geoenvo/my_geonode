@@ -41,7 +41,7 @@ $(function() {
     if ($('#file-uploader').length) {
         // only one accordion panel open at a time
         $('.panel-heading a').on('click', function(e) {
-            if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
+            if($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
                 e.preventDefault();
                 e.stopPropagation();
             }
@@ -55,9 +55,62 @@ $(function() {
         $('input#change_layer_style_groups').val('Pengelola-Basis-Data');
         $('input#manage_resourcebase_groups').val('Pengelola-Basis-Data');
         
-        // open the file upload panel
+        // check required metadata fields
+        validateMetadata = function() {
+            return true;
+        }
+        
+        // this executes before geonode's file upload handling
         $('#upload-button').on('click', function(e) {
-            $('a[href$="#collapseFileUpload"]').trigger('click');
+            if (validateMetadata() == false) {
+                // scroll to and open the metadata panel
+                $('html, body').animate({
+                    'scrollTop': $('a[href$="#collapseMetadata"]').closest('.panel').offset().top - 120
+                }, 0, function() {
+                    if($('#collapseMetadata').hasClass('in') == false) {
+                        console.log('a');
+                        $('a[href$="#collapseMetadata"]').trigger('click');
+                    }
+                });
+                
+                // don't continue with geonode's file upload handling
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+            }
+            else {
+                // metadata is valid, let geonode's file upload handling do the rest
+                // scroll to and open the file upload panel
+                if ($('#status').length) {
+                    // file upload process has started, scroll to the progress bar
+                    $('html, body').animate({
+                        'scrollTop': $('#status').offset().top
+                    }, 0, function() {
+                        if($('#collapseFileUpload').hasClass('in') == false) {
+                            $('a[href$="#collapseFileUpload"]').trigger('click');
+                        }
+                    });
+                    
+                    // keep checking for 'Layer Info' button to appear and redirect to layer detail page
+                    var checkLayerInfo = setInterval(function() {
+                        if ($('#status .alert-success a.btn-success').length) {
+                            layerURL = $('#status .alert-success a.btn-success').attr('href');
+                            clearInterval(checkLayerInfo);
+                            window.location.href = layerURL;
+                       }
+                    }, 100); // check every 100ms
+                }
+                else {
+                    // scroll to top of file upload panel to show message
+                    $('html, body').animate({
+                        'scrollTop': $('a[href$="#collapseFileUpload"]').closest('.panel').offset().top - 120
+                    }, 0, function() {
+                        if($('#collapseFileUpload').hasClass('in') == false) {
+                            $('a[href$="#collapseFileUpload"]').trigger('click');
+                        }
+                    });
+                }
+            }
         });
     }
     
