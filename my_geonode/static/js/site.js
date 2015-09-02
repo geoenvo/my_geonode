@@ -37,4 +37,14 @@ $(function() {
         .select();
     });
     
+    // override default group permissions on 'upload' and 'replace' layers page
+    if ($('#file-uploader').length) {
+        $('input#view_resourcebase_groups').val('Pengelola-Data-Kabupaten,Pemantau-dan-Evaluator');
+        $('input#download_resourcebase_groups').val('Pengelola-Data-Kabupaten,Pemantau-dan-Evaluator');
+        $('input#change_resourcebase_metadata_groups').val('Pengelola-Basis-Data');
+        $('input#change_layer_data_groups').val('Pengelola-Basis-Data');
+        $('input#change_layer_style_groups').val('Pengelola-Basis-Data');
+        $('input#manage_resourcebase_groups').val('Pengelola-Basis-Data');
+    }
+    
 });
