@@ -47,6 +47,9 @@ $(function() {
             }
         });
         
+        // set Indonesian as default language metadata
+        $('#id_resource-language option[value="ind"]').attr('selected', 'selected');
+        
         // set default group permissions
         $('input#view_resourcebase_groups').val('Pengelola-Data-Kabupaten,Pemantau-dan-Evaluator');
         $('input#download_resourcebase_groups').val('Pengelola-Data-Kabupaten,Pemantau-dan-Evaluator');
