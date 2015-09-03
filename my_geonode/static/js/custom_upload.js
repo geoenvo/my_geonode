@@ -41,8 +41,7 @@ $(function() {
                 var requiredField = $('#form_metadata [name="' + requiredFieldNames[i] + '"]');
                 
                 if (!requiredField.val()) {
-                    console.log(requiredFieldNames[i]);
-                    $('#form_metadata div.alert').toggleClass('hidden');
+                    $('#form_metadata div.alert').removeClass('hidden');
                     requiredField.closest('.form-group').addClass('has-error');
                     valid = false;
                 }
@@ -97,7 +96,7 @@ $(function() {
                         if ($('#status .alert-success a.btn-success').length) {
                             layerURL = $('#status .alert-success a.btn-success').attr('href');
                             clearInterval(checkLayerInfo);
-                            window.location.href = layerURL;
+                            //window.location.href = layerURL;
                        }
                     }, 100); // check every 100ms
                 }
