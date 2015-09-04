@@ -10,6 +10,25 @@ $(function() {
             }
         });
         
+        // initialize datepickers
+        var dpickerOptions = {
+            format: 'YYYY-MM-DD HH:mm',
+            useCurrent: true,
+            pickDate: true,
+            pickTime: true,
+            language: 'en',
+            icons: {
+                time: 'fa fa-clock-o',
+                date: 'fa fa-calendar',
+                up: 'fa fa-chevron-up',
+                down: 'fa fa-chevron-down'
+            }
+        };
+        
+        $('#icraf_dr_date_created_picker').datetimepicker(dpickerOptions);
+        $('#icraf_dr_date_published_picker').datetimepicker(dpickerOptions);
+        $('#icraf_dr_date_revised_picker').datetimepicker(dpickerOptions);
+        
         // set default group permissions
         $('#permission_form input#view_resourcebase_groups').val('Pengelola-Data-Kabupaten,Pemantau-dan-Evaluator');
         $('#permission_form input#download_resourcebase_groups').val('Pengelola-Data-Kabupaten,Pemantau-dan-Evaluator');
@@ -21,6 +40,11 @@ $(function() {
         // set Indonesian as default language metadata
         $('#form_metadata [name="resource-language"] option[value="ind"]').attr('selected', 'selected');
         
+        // set selected year dropdown to current year
+        var current = new Date()
+        var year = current.getFullYear()
+        $('#form_metadata [name="icraf_dr_year"] option:contains("' + year + '")').attr('selected', 'selected');
+        
         // uncheck published checkbox
         $('#form_metadata [name="resource-is_published"]').attr('checked', false);
         
@@ -31,8 +55,10 @@ $(function() {
             // required text input
             var requiredFieldNames = [
               'resource-title',
-              'resource-edition',
+              //'resource-edition', # replaced by icraf_dr_date_created
+              'icraf_dr_date_created',
               'resource-abstract',
+              'resource-regions',
               'resource-data_quality_statement',
               'resource-keywords',
             ];

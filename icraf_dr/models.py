@@ -1,4 +1,6 @@
+import datetime
 from django.db import models
+from geonode.base.models import TopicCategory
 
 class Category(models.Model):
     class Meta:
@@ -45,6 +47,12 @@ class Main(models.Model):
     source = models.ForeignKey(Source)
     year = models.ForeignKey(Year)
     basename = models.CharField(max_length=255)
+    layer = models.ForeignKey('layers.Layer', null=True)
+    topic_category = models.ForeignKey(TopicCategory, null=True)
+    regions = models.TextField(null=True, blank=True)
+    date_created = models.DateTimeField(default=datetime.datetime.now)
+    date_published = models.DateTimeField(null=True, blank=True)
+    date_revised = models.DateTimeField(null=True, blank=True)
     
     def __unicode__(self):
         return u'%s-%s-%s-%s-%s' % (
