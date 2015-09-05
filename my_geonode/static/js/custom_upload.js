@@ -52,13 +52,15 @@ $(function() {
         validateMetadata = function() {
             var valid = true;
             
-            // required text input
+            // required text input name attributes
             var requiredFieldNames = [
               'resource-title',
               //'resource-edition', # replaced by icraf_dr_date_created
               'icraf_dr_date_created',
+              'icraf_dr_source',
               'resource-abstract',
               'resource-regions',
+              'resource-language',
               'resource-data_quality_statement',
               'resource-keywords',
             ];
@@ -92,7 +94,7 @@ $(function() {
             if (validateMetadata() == false) {
                 // scroll to and open the metadata panel
                 $('html, body').animate({
-                    'scrollTop': $('a[href$="#collapseMetadata"]').closest('.panel').offset().top - 120
+                    'scrollTop': $('a[href$="#collapseMetadata"]').closest('.panel').offset().top - 100
                 }, 0, function() {
                     if($('#collapseMetadata').hasClass('in') == false) {
                         $('a[href$="#collapseMetadata"]').trigger('click');
@@ -129,7 +131,7 @@ $(function() {
                 else {
                     // scroll to top of file upload panel to show message
                     $('html, body').animate({
-                        'scrollTop': $('a[href$="#collapseFileUpload"]').closest('.panel').offset().top - 120
+                        'scrollTop': $('a[href$="#collapseFileUpload"]').closest('.panel').offset().top - 100
                     }, 0, function() {
                         if($('#collapseFileUpload').hasClass('in') == false) {
                             $('a[href$="#collapseFileUpload"]').trigger('click');
