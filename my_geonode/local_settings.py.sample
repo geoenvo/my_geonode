@@ -28,7 +28,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'ckeditor',
     'extended_flatpages',
-    #'notification',
+    'notification',
 ) + INSTALLED_APPS
 
 # Django Extended Flatpages settings
