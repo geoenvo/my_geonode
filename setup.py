@@ -28,5 +28,6 @@ setup(
         'django-blog-zinnia==0.14.3',
         'django-ckeditor==4.5.3',
         'django_extended_flatpages==0.1',
+        'South==1.0.2',
     ]
 )
