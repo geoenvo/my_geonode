@@ -50,7 +50,7 @@ class Main(models.Model):
     layer = models.ForeignKey('layers.Layer', null=True)
     topic_category = models.ForeignKey(TopicCategory, null=True)
     regions = models.TextField(null=True, blank=True)
-    date_created = models.DateTimeField(default=datetime.datetime.now)
+    date_created = models.DateTimeField(null=True, default=datetime.datetime.now)
     date_published = models.DateTimeField(null=True, blank=True)
     date_revised = models.DateTimeField(null=True, blank=True)
     
