@@ -26,6 +26,7 @@ setup(
         'django-tastypie==0.11.0',
         'django-tagging==0.3.6',
         'django-blog-zinnia==0.14.3',
+        'django-ckeditor==4.5.3',
         'django_extended_flatpages==0.1',
     ]
 )
