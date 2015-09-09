@@ -55,7 +55,7 @@ CKEDITOR_CONFIGS = {
 # Documents application
 ALLOWED_DOCUMENT_TYPES = [
     'csv', 'doc', 'docx', 'gif', 'jpg', 'jpeg', 'ods', 'odt', 'odp', 'pdf', 'png', 'ppt',
-    'pptx', 'rar', 'tif', 'tiff', 'txt', 'xls', 'xlsx', 'xml', 'zip', 'gz'
+    'pptx', 'rar', 'tif', 'tiff', 'txt', 'xls', 'xlsx', 'xml', 'zip', 'gz', 'dbf'
 ]
 MAX_DOCUMENT_SIZE = 2  # MB
 DOCUMENT_TYPE_MAP = {
@@ -69,6 +69,7 @@ DOCUMENT_TYPE_MAP = {
     'xls': 'text',
     'xlsx': 'text',
     'xml': 'text',
+    'dbf': 'text',
 
     'gif': 'image',
     'jpg': 'image',
