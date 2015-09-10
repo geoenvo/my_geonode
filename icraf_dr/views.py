@@ -5,6 +5,21 @@ from django.core.urlresolvers import reverse
 from icraf_dr.forms import CategoryForm, MainForm
 from icraf_dr.models import Category, Coverage, Source, Year, Main
 
+from geonode.layers.models import Layer
+
+def icraf_home(request, template='icraf_dr/icraf_home.html'):
+    """ custom home views handler
+    """
+    # query layers: published, order by id descending, limit 3
+    layers = Layer.objects.filter(is_published=True).order_by('-id')[:3]
+    
+    context_dict = {
+        'layers': layers,
+    }
+    
+    return render_to_response(template, RequestContext(request, context_dict))
+
+    
 def index(request, template='icraf_dr/index.html'):
     # Obtain the context from the HTTP request.
     context = RequestContext(request)

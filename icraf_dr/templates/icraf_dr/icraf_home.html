@@ -1,0 +1,6 @@
+{% extends 'site_index.html' %}
+{% block mainbody %}
+  {% for layer in layers %}
+    {{ layer.name }}
+  {% endfor %}
+{% endblock %}
