@@ -10,11 +10,11 @@ from geonode.layers.models import Layer
 def icraf_home(request, template='icraf_dr/icraf_home.html'):
     """ custom home views handler
     """
-    # query layers: published, order by id descending, limit 3
-    layers = Layer.objects.filter(is_published=True).order_by('-id')[:3]
+    # query layers: published, order by id descending, limit 4
+    layers = Layer.objects.filter(is_published=True).order_by('-id')[:4]
     
     context_dict = {
-        'layers': layers,
+        'recent_content': layers,
     }
     
     return render_to_response(template, RequestContext(request, context_dict))

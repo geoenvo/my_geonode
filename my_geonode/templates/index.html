@@ -22,6 +22,8 @@
 
   {% block mainbody %}
   <div class="container">
+    {% block mainbody_upper %}
+    {% endblock %}
     <div class="row">
     {% with facet_type='home' %}
      {% facets as facets %}

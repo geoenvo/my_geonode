@@ -200,3 +200,44 @@ body.data #category_form .control-label {
 .icon-addon:hover .fa {
     color: #2580db;
 }
+
+/* recent content block */
+#recent-content {
+    margin-bottom: 30px;
+}
+.recent-box {
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.recent-box:hover {
+    border-color: #e7e7e7;
+}
+.recent-box a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+.recent-abstract {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding: 10px;
+    opacity: 0;
+    background: transparent;
+    transition: opacity .25s, background .25s;
+    -moz-transition: opacity .25s, background .25s;
+    -webkit-transition: opacity .25s, background .25s;
+}
+.recent-abstract:hover {
+    opacity: 1;
+    background: #e7e7e7;
+}
+.recent-title {
+    padding: 5px 10px;
+    background: #ccc;
+    overflow: hidden;
+}
