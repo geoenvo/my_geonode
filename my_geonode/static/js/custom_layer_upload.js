@@ -130,7 +130,7 @@ $(function() {
                     if ($('#status .alert-success a.btn-success').length) {
                         layerURL = $('#status .alert-success a.btn-success').attr('href');
                         clearInterval(checkLayerInfo);
-                        //window.location.href = layerURL;
+                        window.location.href = layerURL; // comment this to stop redirecting to layer detail page
                    }
                 }, 100); // check every 100ms
             }
