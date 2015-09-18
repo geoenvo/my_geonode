@@ -53,6 +53,7 @@ class Main(models.Model):
     date_created = models.DateTimeField(null=True, default=datetime.datetime.now)
     date_published = models.DateTimeField(null=True, blank=True)
     date_revised = models.DateTimeField(null=True, blank=True)
+    document = models.ForeignKey('documents.Document', null=True)
     
     def __unicode__(self):
         return u'%s-%s-%s-%s-%s' % (
