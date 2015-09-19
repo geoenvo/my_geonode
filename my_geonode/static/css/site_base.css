@@ -28,9 +28,17 @@
     padding-right: 7px;
 }
 
-.navbar-nav li.active a {
+.navbar-nav > li.active > a {
     color: #555 !important;
     font-weight: bold;
+}
+
+.navbar-nav .dropdown-menu a {
+    color: #555 !important;
+}
+
+.navbar-nav .dropdown-menu .active a {
+    color: #fff !important;
 }
 
 @media (min-width:992px) {
@@ -110,6 +118,11 @@ body.documents article.ng-scope img.thumb {
 }
 
 /* Metadata form */
+label.required-field:after {
+    content: ' *';
+    color: red;
+}
+
 body.data #category_form .control-label {
     display: block;
     text-align: left;
@@ -212,6 +225,7 @@ body.data #category_form .control-label {
     margin-top: 15px;
     border: 1px solid #ccc;
     position: relative;
+    overflow: hidden;
 }
 .recent-box:hover {
     border-color: #e7e7e7;

@@ -76,8 +76,14 @@
             <li id="nav_maps">
               <a href="{% url "maps_browse" %}">{% trans "Maps" %}</a>
             </li>
-            <li id="nav_documents">
-              <a href="{% url "document_browse" %}">{% trans "Documents" %}</a>
+            <li id="nav_documents" class="dropdown">
+              <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">{% trans "Documents" %} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url "document_browse" %}">{% trans "All Documents" %}</a></li>
+                <li><a href="{% url "document_browse" %}?limit=100&offset=0&doc_type__in=Regulation">{% trans "Regulation" %}</a></li>
+                <li><a href="{% url "document_browse" %}?limit=100&offset=0&doc_type__in=Development%20Document">{% trans "Development Document" %}</a></li>
+                <li><a href="{% url "document_browse" %}?limit=100&offset=0&doc_type__in=other">{% trans "Other" %}</a></li>
+              </ul>
             </li>
             
             {% get_flatpages '/pages/projects/' as page_exists %}
