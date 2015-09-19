@@ -188,7 +188,9 @@ $(function() {
             e.stopImmediatePropagation();
         }
         else {
-            return true;
+            //return true;
+            
+            $('#upload_form').submit();
         }
     });
 });

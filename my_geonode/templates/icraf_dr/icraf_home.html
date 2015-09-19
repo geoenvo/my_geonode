@@ -9,7 +9,7 @@
         <div class="recent-box">
           <div class="text-center">
             <a href="{{ content.detail_url }}" title="{{ content.name|escape }}">
-              <img src="{{ content.thumbnail_url }}" alt="thumbnail">
+              <img src="{{ content.thumbnail_url }}" alt="thumbnail" width="250" height="150">
               <div class="recent-abstract">
                 {{ content.abstract|escape|urlize|linebreaks|safe|truncatechars:250 }}
               </div>

@@ -60,6 +60,8 @@ $(function() {
         // required category radio button set
         if (!$('#form_metadata [name="category_choice_field"]:checked').val()) {
             $('#form_metadata #category_form').addClass('has-error');
+            
+            valid = false;
         }
         else {
             $('#form_metadata #category_form').removeClass('has-error');
