@@ -86,6 +86,7 @@
               </ul>
             </li>
             
+            <!-- 20150921 replace with Users + Groups
             {% get_flatpages '/pages/projects/' as page_exists %}
             {% if page_exists %}
             {% with page_exists|first as the_page %}
@@ -103,14 +104,15 @@
             </li>
             {% endwith %}
             {% endif %}
+            -->
             
-            <!--
             <li id="nav_people">
-              <a href="{% url "profile_browse" %}">{% trans "People" %}</a>
+              <a href="{% url "profile_browse" %}">{% trans "Users" %}</a>
             </li>
             <li id="nav_groups">
               <a href="{% url "group_list" %}">{% trans "Groups" %}</a>
             </li>
+            <!--
             <li id="nav_blog">
               <a href="{% url "zinnia:entry_archive_index" %}">{% trans "Blog" %}</a>
             </li>
@@ -200,9 +202,11 @@
             -->
             {% get_flatpages as flatpages %}
             <ul id="flatpages">
+                <!-- 20150921 move to top navbar
                 <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
                 <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
                 <li><a href="{% url "zinnia:entry_archive_index" %}">{% trans "Blog" %}</a></li>
+                -->
             {% for page in flatpages %}
                 {% if page.url != "/pages/about/" %}
                 {% if page.url != "/pages/projects/" %}

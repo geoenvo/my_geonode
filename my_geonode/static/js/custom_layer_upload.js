@@ -36,8 +36,9 @@ $(function() {
     $('#id_resource-temporal_extent_end_picker').datetimepicker(dpickerOptions);
     
     // set default group permissions
-    $('#permission_form input#view_resourcebase_groups').val('Pengelola-Data-Kabupaten,Pemantau-dan-Evaluator');
-    $('#permission_form input#download_resourcebase_groups').val('Pengelola-Data-Kabupaten,Pemantau-dan-Evaluator');
+    // 20150921 only Pengelola-Basis-Data group for all actions by default
+    $('#permission_form input#view_resourcebase_groups').val('Pengelola-Basis-Data');
+    $('#permission_form input#download_resourcebase_groups').val('Pengelola-Basis-Data');
     $('#permission_form input#change_resourcebase_metadata_groups').val('Pengelola-Basis-Data');
     $('#permission_form input#change_layer_data_groups').val('Pengelola-Basis-Data');
     $('#permission_form input#change_layer_style_groups').val('Pengelola-Basis-Data');
@@ -51,8 +52,13 @@ $(function() {
     var year = current.getFullYear()
     $('#form_metadata [name="icraf_dr_year"] option:contains("' + year + '")').attr('selected', 'selected');
     
+    // 20150921 uncheck anyone from permissions
+    $('#permission_form [name="view_anonymous"]').attr('checked', false);
+    $('#permission_form [name="download_anonymous"]').attr('checked', false);
+    
     // uncheck published checkbox
-    $('#form_metadata [name="resource-is_published"]').attr('checked', false);
+    // 20150921 leave is published checked by default
+    //$('#form_metadata [name="resource-is_published"]').attr('checked', false);
     
     // check required metadata fields
     validateMetadata = function() {

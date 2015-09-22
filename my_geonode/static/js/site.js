@@ -1,7 +1,7 @@
 // DOM Ready
 $(function() {
     // Highlight current page in nav bar
-    $('#nav-main li').each(function() {
+    $('#nav-main > li').each(function() {
         // Count the number of links to the current page in the <li>
         var matched_links = $(this).find('a[href]').filter(function() {
             var valid_path = false;
