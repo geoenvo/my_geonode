@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-19 23:17+0700\n"
+"POT-Creation-Date: 2015-09-22 10:32+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:63 templates/base.html.py:199
+#: templates/base.html:63 templates/base.html.py:201
 msgid "About"
 msgstr ""
 
@@ -58,120 +58,124 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: templates/base.html:93
+#: templates/base.html:94
 msgid "Projects"
 msgstr "Proyek"
 
-#: templates/base.html:102 templates/zinnia/base.html:85
+#: templates/base.html:103 templates/zinnia/base.html:85
 msgid "Tools"
 msgstr ""
 
-#: templates/base.html:109 templates/base.html.py:203
-msgid "People"
-msgstr ""
+#: templates/base.html:110
+msgid "Users"
+msgstr "Pengguna"
 
-#: templates/base.html:112 templates/base.html.py:204
+#: templates/base.html:113 templates/base.html.py:207
 msgid "Groups"
-msgstr ""
+msgstr "Grup"
 
-#: templates/base.html:115 templates/base.html.py:205
+#: templates/base.html:117 templates/base.html.py:208
 msgid "Blog"
 msgstr ""
 
-#: templates/base.html:136 templates/site_index.html:27
+#: templates/base.html:138 templates/site_index.html:27
 msgid "Register"
 msgstr ""
 
-#: templates/base.html:147 templates/base.html.py:266
+#: templates/base.html:149 templates/base.html.py:270
 msgid "Sign in"
 msgstr ""
 
-#: templates/base.html:155 templates/base.html.py:303
+#: templates/base.html:157 templates/base.html.py:307
 msgid "Help"
 msgstr ""
 
-#: templates/base.html:197
+#: templates/base.html:199
 msgid "Powered by"
 msgstr ""
 
-#: templates/base.html:197
+#: templates/base.html:199
 msgid "GeoNode"
 msgstr ""
 
-#: templates/base.html:197
+#: templates/base.html:199
 msgid "version"
 msgstr ""
 
-#: templates/base.html:198
+#: templates/base.html:200
 msgid "Developers"
 msgstr ""
 
-#: templates/base.html:220
+#: templates/base.html:206
+msgid "People"
+msgstr ""
+
+#: templates/base.html:224
 msgid "Language"
 msgstr ""
 
-#: templates/base.html:254 templates/base.html.py:255
+#: templates/base.html:258 templates/base.html.py:259
 msgid "Username"
 msgstr ""
 
-#: templates/base.html:258
+#: templates/base.html:262
 msgid "Password"
 msgstr ""
 
-#: templates/base.html:262
+#: templates/base.html:266
 msgid "Remember Me"
 msgstr ""
 
-#: templates/base.html:278
+#: templates/base.html:282
 msgid "Profile Menu"
 msgstr ""
 
-#: templates/base.html:282
+#: templates/base.html:286
 msgid "Upload Layers"
 msgstr ""
 
-#: templates/base.html:284
+#: templates/base.html:288
 msgid "Profile"
 msgstr ""
 
-#: templates/base.html:285
+#: templates/base.html:289
 msgid "Recent Activity"
 msgstr ""
 
-#: templates/base.html:286
+#: templates/base.html:290
 msgid "Inbox"
 msgstr ""
 
-#: templates/base.html:288
+#: templates/base.html:292
 msgid "Notifications"
 msgstr ""
 
-#: templates/base.html:291
+#: templates/base.html:295
 msgid "Announcements"
 msgstr ""
 
-#: templates/base.html:294
+#: templates/base.html:298
 msgid "Remote Services"
 msgstr ""
 
-#: templates/base.html:295
+#: templates/base.html:299
 msgid "Invite User"
 msgstr ""
 
-#: templates/base.html:297
+#: templates/base.html:301
 msgid "GeoServer"
 msgstr ""
 
-#: templates/base.html:300
+#: templates/base.html:304
 msgid "Admin"
 msgstr ""
 
-#: templates/base.html:309 templates/zinnia/base.html:104
+#: templates/base.html:313 templates/zinnia/base.html:104
 #: templates/zinnia/base.html.py:105
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:347
+#: templates/base.html:351
 msgid "Type your search here ..."
 msgstr ""
 
