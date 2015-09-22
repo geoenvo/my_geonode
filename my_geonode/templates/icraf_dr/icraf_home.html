@@ -1,24 +1,26 @@
 {% extends 'site_index.html' %}
 {% load i18n %}
-{% block mainbody_upper %}
+{% block mainbody %}
   {% if recent_content %}
-  <div id="recent-content" class="row">
-    <h3 class="heading">{% trans "Recent Layers" %}</h3>
-    {% for content in recent_content %}
-      <div class="col-md-3">
-        <div class="recent-box">
-          <div class="text-center">
-            <a href="{{ content.detail_url }}" title="{{ content.name|escape }}">
-              <img src="{{ content.thumbnail_url }}" alt="thumbnail" width="250" height="150">
-              <div class="recent-abstract">
-                {{ content.abstract|escape|urlize|linebreaks|safe|truncatechars:250 }}
-              </div>
-              <div class="recent-title">{{ content.title|escape|truncatechars:30 }}</div>
-            </a>
+  <div class="container">
+    <div id="recent-content" class="row">
+      <h3 class="heading">{% trans "Recent Layers" %}</h3>
+      {% for content in recent_content %}
+        <div class="col-md-3">
+          <div class="recent-box">
+            <div class="text-center">
+              <a href="{{ content.detail_url }}" title="{{ content.name|escape }}">
+                <img src="{{ content.thumbnail_url }}" alt="thumbnail" width="250" height="150">
+                <div class="recent-abstract">
+                  {{ content.abstract|escape|urlize|linebreaks|safe|truncatechars:250 }}
+                </div>
+                <div class="recent-title">{{ content.title|escape|truncatechars:30 }}</div>
+              </a>
+            </div>
           </div>
         </div>
+      {% endfor %}
       </div>
-    {% endfor %}
     </div>
   {% endif %}
 {% endblock %}

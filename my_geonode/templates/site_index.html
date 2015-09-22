@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load i18n %}
+{% load base_tags %}
 {% comment %}
 This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs. 
 {% endcomment %}
@@ -69,6 +70,28 @@ This is where you can override the hero area block. You can simply modify the co
         <span class="sr-only">Next</span>
     </a>
 </div><!-- /.carousel -->
+
+<div id="facet-ribbon">
+    <div class="container">
+        {% with facet_type='home' %}
+         {% facets as facets %}
+        <div class="row">
+            <div class="col-md-3">
+                <a href="{% url "layer_browse" %}" style="display: block;">{% blocktrans count counter=facets.layer %}Layer{% plural %}Layers{% endblocktrans %} <span class="pull-right">{{ facets.layer|default:_("0") }}</span></a>
+            </div>
+            <div class="col-md-3">
+                <a href="{% url "maps_browse" %}" style="display: block;">{% blocktrans count counter=facets.map %}Map{% plural %}Maps{% endblocktrans %} <span class="pull-right">{{ facets.map|default:_("0") }}</span></a>
+            </div>
+            <div class="col-md-3">
+                <a href="{% url "document_browse" %}" style="display: block;">{% blocktrans count counter=facets.document %}Document{% plural %}Documents{% endblocktrans %} <span class="pull-right">{{ facets.document|default:_("0") }}</span></a>
+            </div>
+            <div class="col-md-3">
+                <a href="{% url "profile_browse" %}" style="display: block;">{% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %} <span class="pull-right">{{ facets.user|default:_("0") }}</span></a>
+            </div>
+        </div>
+        {% endwith %}
+    </div>
+</div>
 
 <!--
 <div class="jumbotron">

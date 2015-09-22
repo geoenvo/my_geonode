@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-22 10:32+0700\n"
+"POT-Creation-Date: 2015-09-22 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,17 +30,17 @@ msgstr ""
 msgid "Spatial Data"
 msgstr "Data Spasial"
 
-#: templates/base.html:73 templates/site_index.html:39
+#: templates/base.html:73 templates/site_index.html:40
 msgid "Layers"
-msgstr ""
+msgstr "Layer"
 
-#: templates/base.html:77 templates/site_index.html:54
+#: templates/base.html:77 templates/site_index.html:55
 msgid "Maps"
-msgstr ""
+msgstr "Peta"
 
 #: templates/base.html:80
 msgid "Documents"
-msgstr ""
+msgstr "Dokumen"
 
 #: templates/base.html:82
 msgid "All Documents"
@@ -78,7 +78,7 @@ msgstr "Grup"
 msgid "Blog"
 msgstr ""
 
-#: templates/base.html:138 templates/site_index.html:27
+#: templates/base.html:138 templates/site_index.html:28
 msgid "Register"
 msgstr ""
 
@@ -183,98 +183,98 @@ msgstr ""
 msgid "Welcome!"
 msgstr ""
 
-#: templates/index.html:15 templates/site_index.html:22
-#: templates/site_index.html.py:76
+#: templates/index.html:15 templates/site_index.html:23
+#: templates/site_index.html.py:99
 msgid "Welcome"
 msgstr ""
 
-#: templates/index.html:16 templates/site_index.html:23
-#: templates/site_index.html.py:77
+#: templates/index.html:16 templates/site_index.html:24
+#: templates/site_index.html.py:100
 msgid ""
 "GeoNode is an open source platform for sharing geospatial data and maps."
 msgstr ""
 
-#: templates/index.html:17 templates/site_index.html:24
-#: templates/site_index.html.py:78
+#: templates/index.html:17 templates/site_index.html:25
+#: templates/site_index.html.py:101
 msgid ""
 "If you have any questions about the software or service, join our <a href="
 "\"https://groups.google.com/d/forum/geonode-users\">mailing list</a>."
 msgstr ""
 
-#: templates/index.html:18 templates/site_index.html:25
-#: templates/site_index.html.py:79
+#: templates/index.html:18 templates/site_index.html:26
+#: templates/site_index.html.py:102
 msgid "Need help?"
 msgstr ""
 
-#: templates/index.html:18 templates/site_index.html:25
-#: templates/site_index.html.py:79
+#: templates/index.html:18 templates/site_index.html:26
+#: templates/site_index.html.py:102
 msgid "Getting Started"
 msgstr ""
 
-#: templates/index.html:33 templates/index.html.py:43 templates/index.html:54
-#: templates/index.html.py:57
+#: templates/index.html:31 templates/index.html.py:41 templates/index.html:52
+#: templates/index.html.py:55
 msgid "No"
 msgstr "0"
 
-#: templates/index.html:33
+#: templates/index.html:31 templates/site_index.html:80
 msgid "Layer"
 msgid_plural "Layers"
 msgstr[0] "Layer"
 msgstr[1] "Layer"
 
-#: templates/index.html:35
+#: templates/index.html:33
 msgid ""
 "Click to search for geospatial data published by other users, organizations "
 "and public sources. Download data in standard formats."
 msgstr ""
 
-#: templates/index.html:37 templates/site_index.html:43
+#: templates/index.html:35 templates/site_index.html:44
 msgid "Explore Layers"
 msgstr ""
 
-#: templates/index.html:43
+#: templates/index.html:41 templates/site_index.html:83
 msgid "Map"
 msgid_plural "Maps"
 msgstr[0] "Peta"
 msgstr[1] "Peta"
 
-#: templates/index.html:45
+#: templates/index.html:43
 msgid ""
 "Data is available for browsing, aggregating and styling to generate maps "
 "which can be shared publicly or restricted to specific users only."
 msgstr ""
 
-#: templates/index.html:47 templates/site_index.html:58
+#: templates/index.html:45 templates/site_index.html:59
 msgid "Create maps"
 msgstr ""
 
-#: templates/index.html:54
+#: templates/index.html:52 templates/site_index.html:89
 msgid "User"
 msgid_plural "Users"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Pengguna"
+msgstr[1] "Pengguna"
 
-#: templates/index.html:57
+#: templates/index.html:55 templates/site_index.html:86
 msgid "Document"
 msgid_plural "Documents"
 msgstr[0] "Dokumen"
 msgstr[1] "Dokumen"
 
-#: templates/index.html:59
+#: templates/index.html:57
 msgid "Upload and share documents in various formats."
 msgstr "Unggah dan berbagi dokumen dalam berbagai format."
 
-#: templates/index.html:61 templates/site_index.html:55
+#: templates/index.html:59 templates/site_index.html:56
 msgid ""
 "GeoNode allows registered users to easily upload geospatial data in several "
 "formats including shapefile and GeoTiff."
 msgstr ""
 
-#: templates/index.html:62
+#: templates/index.html:60
 msgid "Share data"
 msgstr "Berbagi data"
 
-#: templates/site_index.html:40
+#: templates/site_index.html:41
 msgid ""
 "Click to search for geospatial data published by other users, organizations "
 "and public sources."
@@ -282,11 +282,16 @@ msgstr ""
 "Klik untuk mencari data geospasial yang diterbitkan oleh pengguna lain, "
 "organisasi dan sumber-sumber publik."
 
-#: templates/site_index.html:41
+#: templates/site_index.html:42
 msgid "Download data in standard formats."
 msgstr "Download data dalam format standar."
 
-#: templates/icraf_dr/icraf_home.html:6
+#: templates/site_index.html:80 templates/site_index.html.py:83
+#: templates/site_index.html:86 templates/site_index.html.py:89
+msgid "0"
+msgstr ""
+
+#: templates/icraf_dr/icraf_home.html:7
 msgid "Recent Layers"
 msgstr "Layer terbaru"
 

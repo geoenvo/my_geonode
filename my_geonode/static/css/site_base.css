@@ -258,3 +258,39 @@ body.data #category_form .control-label {
     background: #ccc;
     overflow: hidden;
 }
+
+/* facet ribbon */
+#facet-ribbon {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+#facet-ribbon .col-md-3 {
+    border-right: 1px solid #ccc;
+    padding: 0;
+}
+#facet-ribbon .col-md-3:last-child {
+    border-right: none;
+}
+@media (max-width:992px) {
+    #facet-ribbon .col-md-3 {
+        border-left: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+    #facet-ribbon .col-md-3:last-child {
+        border-right: 1px solid #ccc;
+        border-bottom: none;
+    }
+}
+#facet-ribbon a .pull-right {
+    font-size: 20px;
+    line-height: 20px;
+}
+#facet-ribbon a {
+    color: #777;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+#facet-ribbon a:hover {
+    color: #333;
+}
