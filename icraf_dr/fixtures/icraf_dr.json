@@ -726,13 +726,103 @@
         "pk": 47,
         "model": "icraf_dr.Year",
         "fields": {
+            "year_num": "2016",
+            "year_alp": "-",
+            "year_name": "2016"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "icraf_dr.Year",
+        "fields": {
+            "year_num": "2017",
+            "year_alp": "-",
+            "year_name": "2017"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "icraf_dr.Year",
+        "fields": {
+            "year_num": "2018",
+            "year_alp": "-",
+            "year_name": "2018"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "icraf_dr.Year",
+        "fields": {
+            "year_num": "2019",
+            "year_alp": "-",
+            "year_name": "2019"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "icraf_dr.Year",
+        "fields": {
+            "year_num": "2020",
+            "year_alp": "-",
+            "year_name": "2020"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "icraf_dr.Year",
+        "fields": {
+            "year_num": "2021",
+            "year_alp": "-",
+            "year_name": "2021"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "icraf_dr.Year",
+        "fields": {
+            "year_num": "2022",
+            "year_alp": "-",
+            "year_name": "2022"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "icraf_dr.Year",
+        "fields": {
+            "year_num": "2023",
+            "year_alp": "-",
+            "year_name": "2023"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "icraf_dr.Year",
+        "fields": {
+            "year_num": "2024",
+            "year_alp": "-",
+            "year_name": "2024"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "icraf_dr.Year",
+        "fields": {
+            "year_num": "2025",
+            "year_alp": "-",
+            "year_name": "2025"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "icraf_dr.Year",
+        "fields": {
             "year_num": "991970",
             "year_alp": "-",
             "year_name": "1970-1979"
         }
     },
     {
-        "pk": 48,
+        "pk": 58,
         "model": "icraf_dr.Year",
         "fields": {
             "year_num": "991980",
@@ -741,7 +831,7 @@
         }
     },
     {
-        "pk": 49,
+        "pk": 59,
         "model": "icraf_dr.Year",
         "fields": {
             "year_num": "991990",
@@ -750,7 +840,7 @@
         }
     },
     {
-        "pk": 50,
+        "pk": 60,
         "model": "icraf_dr.Year",
         "fields": {
             "year_num": "992000",
@@ -759,7 +849,7 @@
         }
     },
     {
-        "pk": 51,
+        "pk": 61,
         "model": "icraf_dr.Year",
         "fields": {
             "year_num": "992010",
@@ -768,7 +858,7 @@
         }
     },
     {
-        "pk": 52,
+        "pk": 62,
         "model": "icraf_dr.Year",
         "fields": {
             "year_num": "992020",

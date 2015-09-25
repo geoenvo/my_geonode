@@ -21,12 +21,18 @@ This is where you can override the hero area block. You can simply modify the co
             <div class="container">
                 <div class="carousel-caption">
                     <h1 class="text-left">{% trans "Welcome" %}</h1>
+                    <p class="text-left">{% blocktrans %}Sistem Informasi Pembangunan Daerah Kabupaten Banyuasin <br>(SIMBANGDA Banyuasin){% endblocktrans %}</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <!--
                     <p class="text-left">{% blocktrans %}GeoNode is an open source platform for sharing geospatial data and maps.{% endblocktrans %}</p>
                     <p class="text-left">{% blocktrans %}If you have any questions about the software or service, join our <a href="https://groups.google.com/d/forum/geonode-users">mailing list</a>.{% endblocktrans %}</p>
                     <p class="text-left">{% trans 'Need help?' %} <a href="http://docs.geonode.org/en/latest/tutorials/users/quickstart/index.html">{% trans 'Getting Started' %}</a></p>
                     {% if not user.is_authenticated and REGISTRATION_OPEN %}
                     <p class="text-right"><a class="btn btn-lg btn-primary" href="{% url "account_signup" %}" role="button">{% trans "Register" %}</a></p>
                     {% endif %}
+                    -->
                 </div>
             </div>
         </div>

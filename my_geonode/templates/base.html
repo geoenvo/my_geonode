@@ -194,7 +194,20 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-4">
+            <div id="footer-logo">
+              <img src="{{ STATIC_URL }}img/logo_INSTANT_small.jpg" alt="INSTANT">
+            </div>
+            <div id="footer-credits">
+              {% trans "Powered by" %} <a href="http://geonode.org" target="_blank">{% trans "GeoNode" %}</a>
+              <br>
+              {% trans "Developed by" %} <a href="http://worldagroforestry.org/lama-i" target="_blank">LAMA-I Project</a> | {% trans "Supported by" %} <a href="http://www.esp3.org/index.php/en/" target="_blank">DANIDA</a>
+              <!--
+              GeoNode customization by seno@geo.co.id
+              -->
+            </div>
+          </div>
+          <div class="col-md-4">
             <!--
             {% trans "Powered by" %} <a href="http://geonode.org">{% trans "GeoNode" %}</a> <em>{% trans "version" %} {{ VERSION }}</em> |
             <a href="{% url "developer" %}">{% trans "Developers" %}</a> |
