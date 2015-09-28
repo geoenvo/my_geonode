@@ -46,6 +46,7 @@ $(function() {
     
     // set Indonesian as default language metadata
     $('#form_metadata [name="resource-language"] option[value="ind"]').attr('selected', 'selected');
+    $('#form_metadata [name="resource-regions"] option[value="115"]').attr('selected', 'selected');
     
     // set selected year dropdown to current year
     var current = new Date()

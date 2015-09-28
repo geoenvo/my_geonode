@@ -89,6 +89,7 @@ DOCUMENT_TYPE_MAP = {
 }
 
 ALLOWED_HOSTS = ['192.168.0.207']
+PROXY_ALLOWED_HOSTS = ('demo.opengeo.org',)
 
 DATABASES = {
     'default': {
