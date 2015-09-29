@@ -63,6 +63,16 @@
     }
 }
 
+/* advanced search link */
+#advanced-search {
+    font-size: 12px;
+    margin-top: 10px;
+}
+#advanced-search a {
+    color: #777;
+    text-decoration: none;
+}
+
 /* Carousel base class */
 .carousel {
     height: 300px;
