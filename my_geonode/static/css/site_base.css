@@ -51,15 +51,20 @@
     background-color: #ccc;
 }
 
+/* navbar searchbox */
 @media (min-width:992px) {
     #search.navbar-form .col-md-4 {
         width: 30%;
     }
 }
-
 @media (max-width:1200px) {
     #search.navbar-form .col-md-4 {
         width: 23%;
+    }
+}
+@media (max-width:991px) {
+    #search.navbar-form .col-md-4 {
+        width: 100%;
     }
 }
 
@@ -71,6 +76,30 @@
 #advanced-search a {
     color: #777;
     text-decoration: none;
+}
+
+/* userinfo block */
+#userinfo-avatar img {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+#userinfo-username {
+    margin-left: 5px;
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media (max-width:1200px) {
+    #userinfo-username {
+        max-width: 50px;
+    }
+}
+@media (max-width:991px) {
+    #userinfo-username {
+        max-width: 90%;
+    }
 }
 
 /* Carousel base class */

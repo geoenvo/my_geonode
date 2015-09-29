@@ -140,8 +140,10 @@
             {% endif %}
             {% if user.is_authenticated %}
             <li>
-              <a href="#" data-toggle="modal" data-target="#UserModal" role="button" aria-expanded="false">
-                {% avatar user 20 %} {{ user.username }}
+              <a id="userinfo-block" href="#" data-toggle="modal" data-target="#UserModal" role="button" aria-expanded="false">
+                <div id="userinfo-avatar" class="pull-left">{% avatar user 20 %}</div>
+                <div id="userinfo-username" class="pull-left">{{ user.username }}</div>
+                <div class="clearfix"></div>
               </a>
             </li>
             {% else %}
