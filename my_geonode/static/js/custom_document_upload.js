@@ -65,6 +65,7 @@ $(function() {
     // only allow doc_file or doc_url, not both
     validateFileUpload = function() {
         var valid = true;
+        
         var doc_title = $('#form_document [name="title"]');
         var doc_file = $('#form_document [name="doc_file"]');
         var doc_type = $('#form_document [name="doc_type"]:checked');
@@ -90,6 +91,7 @@ $(function() {
             $('#form_document #doc_type').removeClass('has-error');
         }
         
+        // must set at least 1
         if (!doc_file.val() && !doc_url.val()) {
             $('#form_document div.alert').removeClass('hidden');
             doc_file.closest('.form-group').addClass('has-error');
@@ -100,6 +102,7 @@ $(function() {
             return valid;
         }
         
+        // must not set both
         if (doc_file.val() && doc_url.val()) {
             $('#form_document div.alert').removeClass('hidden');
             doc_file.closest('.form-group').addClass('has-error');
@@ -112,7 +115,9 @@ $(function() {
             doc_url.closest('.form-group').removeClass('has-error');
         }
         
-        if (valid) {
+        if (!valid) {
+            $('#form_document div.alert').removeClass('hidden');
+        } else {
             $('#form_document div.alert').addClass('hidden');
         }
         
@@ -140,8 +145,8 @@ $(function() {
             var requiredField = $('#form_metadata [name="' + requiredFieldNames[i] + '"]');
             
             if (!requiredField.val()) {
-                $('#form_metadata div.alert').removeClass('hidden');
                 requiredField.closest('.form-group').addClass('has-error');
+                
                 valid = false;
             }
             else {
@@ -152,12 +157,16 @@ $(function() {
         // required category radio button set
         if (!$('#form_metadata [name="category_choice_field"]:checked').val()) {
             $('#form_metadata #category_form').addClass('has-error');
+            
+            valid = false;
         }
         else {
             $('#form_metadata #category_form').removeClass('has-error');
         }
         
-        if (valid) {
+        if (!valid) {
+            $('#form_metadata div.alert').removeClass('hidden');
+        } else {
             $('#form_metadata div.alert').addClass('hidden');
         }
         
