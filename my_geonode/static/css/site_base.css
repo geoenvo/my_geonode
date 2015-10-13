@@ -360,3 +360,11 @@ body.data #category_form .control-label {
     margin-top: 5px;
     font-size: 12px;
 }
+
+/* google website translater plugin */
+#google_translate_element {
+    margin-top: 30px;
+}
+#google_translate_element .goog-te-menu-value {
+    text-decoration: none;
+}
