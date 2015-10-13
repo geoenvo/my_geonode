@@ -44,6 +44,9 @@ $(function() {
     $('#permission_form input#change_layer_style_groups').val('Pengelola-Basis-Data');
     $('#permission_form input#manage_resourcebase_groups').val('Pengelola-Basis-Data');
     
+    // set default date_type to creation
+    $('#form_metadata [name="resource-date_type"] option[value="creation"]').attr('selected', 'selected');
+    
     // set Indonesian as default language metadata
     $('#form_metadata [name="resource-language"] option[value="ind"]').attr('selected', 'selected');
     $('#form_metadata [name="resource-regions"] option[value="115"]').attr('selected', 'selected');
