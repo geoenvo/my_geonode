@@ -154,6 +154,13 @@ CATALOGUE = {
     }
 }
 
+# Google Maps API key request: http://code.google.com/apis/maps/signup.html
+# Bing Maps API key request: http://bingmapsportal.com/
+
+"""
+BING_API_KEY = ""
+GOOGLE_API_KEY = ""
+
 MAP_BASELAYERS = [{
     "source": {"ptype": "gxp_olsource"},
     "type": "OpenLayers.Layer",
@@ -178,17 +185,22 @@ MAP_BASELAYERS = [{
     "name": "naip",
     "group": "background",
     "visibility": False
-}, 
-# {    
-#     "source": {"ptype": "gxp_bingsource"},
-#     "name": "AerialWithLabels",
-#     "fixed": True,
-#     "visibility": False,
-#     "group": "background"
-# }, 
-{
+}, {    
+    "source": {"ptype": "gxp_bingsource", "apiKey": BING_API_KEY},
+    "name": "AerialWithLabels",
+    "fixed": True,
+    "visibility": False,
+    "group": "background"
+}, {
+    "source": {"ptype":"gxp_googlesource", "apiKey": GOOGLE_API_KEY},
+    "group":"background",
+    "name":"SATELLITE",
+    "visibility": False,
+    "fixed": True,
+}, {
     "source": {"ptype": "gxp_mapboxsource"},
 }]
+"""
 
 # Default preview library
 #LAYER_PREVIEW_LIBRARY = 'geoext'
