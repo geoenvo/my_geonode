@@ -5,6 +5,7 @@
 This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs. 
 {% endcomment %}
 {% block hero %}
+{% block carousel %}
 <div id="CarouselHome" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -76,6 +77,7 @@ This is where you can override the hero area block. You can simply modify the co
         <span class="sr-only">Next</span>
     </a>
 </div><!-- /.carousel -->
+{% endblock %}
 
 <div id="facet-ribbon">
     <div class="container">

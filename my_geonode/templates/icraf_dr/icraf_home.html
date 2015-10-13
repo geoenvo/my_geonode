@@ -24,3 +24,42 @@
     </div>
   {% endif %}
 {% endblock %}
+{% if sliders %}
+{% block carousel %}
+<div id="CarouselHome" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    {% for slider in sliders %}
+    <li data-target="#CarouselHome" data-slide-to="{{ forloop.counter }}" {% if forloop.first %}class="active"{% endif %}></li>
+    {% endfor %}
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    {% for slider in sliders %}
+    <div class="item{% if forloop.first %} active{% endif %}">
+      <img src="{{ MEDIA_URL }}{{ slider.image }}" alt="Slider {{ forloop.counter }}">
+      <div class="container">
+        <div class="carousel-caption">
+          {% if slider.description %}
+          {% autoescape off %}
+          {{ slider.description }}
+          {% endautoescape %}
+          {% endif %}
+          {% if slider.link and slider.link_text %}
+          <p class="text-right"><a class="btn btn-lg btn-primary" href="{% autoescape off %}{{ slider.link }}{% endautoescape %}" role="button">{{ slider.link_text }}</a></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <a class="left carousel-control" href="#CarouselHome" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#CarouselHome" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><!-- /.carousel --> 
+{% endblock %}
+{% endif %}

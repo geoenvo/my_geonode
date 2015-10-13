@@ -58,8 +58,13 @@ class MainAdmin(ReadOnlyModelAdmin):
     def year(self, instance):
         return '%s-%s-%s' % (str(instance.year.year_num), instance.year.year_alp, instance.year.year_name)
 
+class SliderAdmin(admin.ModelAdmin):
+  list_display = ('position', 'image', 'is_published')
+  ordering = ['position']
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Coverage, CoverageAdmin)
 admin.site.register(Source, SourceAdmin)
 admin.site.register(Year, YearAdmin)
 admin.site.register(Main, MainAdmin)
+admin.site.register(Slider, SliderAdmin)

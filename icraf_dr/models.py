@@ -63,3 +63,12 @@ class Main(models.Model):
             str(self.year.year_num),
             self.basename
         )
+
+class Slider(models.Model):
+    image = models.ImageField(upload_to='icraf_dr_slider')
+    position = models.PositiveIntegerField(null=True, blank=True)
+    description = models.TextField(max_length=512, blank=True)
+    link = models.CharField(max_length=512, blank=True)
+    link_text = models.CharField(max_length=512, blank=True)
+    is_published = models.BooleanField(default=False)
+    
