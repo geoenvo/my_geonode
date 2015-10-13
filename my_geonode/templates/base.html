@@ -164,6 +164,13 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
+      <div id="lang-switcher">
+        <form action="/i18n/setlang/" method="post">
+          {% csrf_token %}
+          <input class="lang-button flag-icon flag-icon-id" type="submit" name="language" value="id">
+          <input class="lang-button flag-icon flag-icon-gb" type="submit" name="language" value="en">
+        </form>
+      </div>
     </nav>
     {% endblock header %}
 
