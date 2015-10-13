@@ -5,13 +5,17 @@ from django.core.urlresolvers import reverse
 from icraf_dr.forms import CategoryForm, MainForm
 from icraf_dr.models import Category, Coverage, Source, Year, Main
 
+from guardian.shortcuts import get_objects_for_user
 from geonode.layers.models import Layer
 
 def icraf_home(request, template='icraf_dr/icraf_home.html'):
     """ custom home views handler
     """
-    # query layers: published, order by id descending, limit 4
-    layers = Layer.objects.filter(is_published=True).order_by('-id')[:4]
+    # query layers: published, user has view perm, order by id descending, limit 4
+    authorized = get_objects_for_user(
+            request.user, 'base.view_resourcebase').values('id')
+    layers = Layer.objects.filter(is_published=True)
+    layers = layers.filter(id__in=authorized).order_by('-id')[:4]
     
     context_dict = {
         'recent_content': layers,
