@@ -24,8 +24,9 @@
     </div>
   {% endif %}
 {% endblock %}
-{% if sliders %}
+
 {% block carousel %}
+{% if sliders %}
 <div id="CarouselHome" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -60,6 +61,8 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div><!-- /.carousel --> 
-{% endblock %}
+</div><!-- /.carousel -->
+{% else %}
+{{ block.super }}
 {% endif %}
+{% endblock %}
