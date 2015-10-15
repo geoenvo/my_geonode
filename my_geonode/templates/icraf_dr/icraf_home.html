@@ -41,7 +41,7 @@
         <div class="carousel-caption">
           {% if slider.description %}
           {% autoescape off %}
-          {{ slider.description }}
+          {{ slider.description|removetags:'script iframe' }}
           {% endautoescape %}
           {% endif %}
           {% if slider.link and slider.link_text %}

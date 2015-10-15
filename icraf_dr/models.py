@@ -65,10 +65,10 @@ class Main(models.Model):
         )
 
 class Slider(models.Model):
-    image = models.ImageField(upload_to='icraf_dr_slider')
-    position = models.PositiveIntegerField(null=True, blank=True)
-    description = models.TextField(max_length=512, blank=True)
-    link = models.CharField(max_length=512, blank=True)
-    link_text = models.CharField(max_length=512, blank=True)
-    is_published = models.BooleanField(default=False)
+    image = models.ImageField(upload_to='icraf_dr_slider', help_text='the slide image, use 1200x600 pixel images for best results')
+    position = models.PositiveIntegerField(null=True, blank=True, help_text='position determines the order of the slide, smaller value is shown first')
+    description = models.TextField(max_length=512, blank=True, help_text='the text in the slide body, can use html')
+    link = models.CharField(max_length=512, blank=True, help_text='a link to an internal or external resource, example: /layers/')
+    link_text = models.CharField(max_length=512, blank=True, help_text='the text in the link button')
+    is_published = models.BooleanField(default=False, help_text='only published slides are shown')
     
