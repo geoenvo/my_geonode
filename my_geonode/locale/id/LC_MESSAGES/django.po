@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-29 15:38+0700\n"
+"POT-Creation-Date: 2015-10-15 15:32+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:63 templates/base.html.py:217
+#: templates/base.html:63 templates/base.html.py:226
 msgid "About"
 msgstr ""
 
@@ -30,11 +30,11 @@ msgstr ""
 msgid "Spatial Data"
 msgstr "Data Spasial"
 
-#: templates/base.html:73 templates/site_index.html:46
+#: templates/base.html:73 templates/site_index.html:47
 msgid "Layers"
 msgstr "Layer"
 
-#: templates/base.html:77 templates/site_index.html:61
+#: templates/base.html:77 templates/site_index.html:62
 msgid "Maps"
 msgstr "Peta"
 
@@ -48,146 +48,154 @@ msgstr "Semua Dokumen"
 
 #: templates/base.html:83
 msgid "Regulation"
-msgstr ""
+msgstr "Produk Hukum"
 
 #: templates/base.html:84
-msgid "Development Document"
-msgstr ""
+msgid "Text Documents"
+msgstr "Dokumen Teks"
 
 #: templates/base.html:85
-msgid "Other"
-msgstr ""
+msgid "Tabular Data"
+msgstr "Data Tabular"
 
-#: templates/base.html:94
+#: templates/base.html:86
+msgid "Pictures"
+msgstr "Gambar"
+
+#: templates/base.html:87
+msgid "Static Maps"
+msgstr "Peta Cetak"
+
+#: templates/base.html:96
 msgid "Projects"
 msgstr "Proyek"
 
-#: templates/base.html:103 templates/zinnia/base.html:85
+#: templates/base.html:105 templates/zinnia/base.html:85
 msgid "Tools"
 msgstr ""
 
-#: templates/base.html:110
+#: templates/base.html:112
 msgid "Users"
 msgstr "Pengguna"
 
-#: templates/base.html:113 templates/base.html.py:223
+#: templates/base.html:115 templates/base.html.py:232
 msgid "Groups"
 msgstr "Grup"
 
-#: templates/base.html:117 templates/base.html.py:224
+#: templates/base.html:119 templates/base.html.py:233
 msgid "Blog"
 msgstr ""
 
-#: templates/base.html:134
+#: templates/base.html:136
 msgid "Advanced Search"
 msgstr "Pencarian Lanjutan"
 
-#: templates/base.html:139 templates/site_index.html:33
+#: templates/base.html:141 templates/site_index.html:34
 msgid "Register"
 msgstr ""
 
-#: templates/base.html:152 templates/base.html.py:286
+#: templates/base.html:154 templates/base.html.py:295
 msgid "Sign in"
 msgstr ""
 
-#: templates/base.html:160 templates/base.html.py:323
+#: templates/base.html:162 templates/base.html.py:332
 msgid "Help"
 msgstr ""
 
-#: templates/base.html:205 templates/base.html.py:215
+#: templates/base.html:214 templates/base.html.py:224
 msgid "Powered by"
 msgstr "Ditenagai oleh"
 
-#: templates/base.html:205 templates/base.html.py:215
+#: templates/base.html:214 templates/base.html.py:224
 msgid "GeoNode"
 msgstr ""
 
-#: templates/base.html:207
+#: templates/base.html:216
 msgid "Developed by"
 msgstr "Dikembangkan oleh"
 
-#: templates/base.html:207
+#: templates/base.html:216
 msgid "Supported by"
 msgstr "Didukung oleh"
 
-#: templates/base.html:215
+#: templates/base.html:224
 msgid "version"
 msgstr ""
 
-#: templates/base.html:216
+#: templates/base.html:225
 msgid "Developers"
 msgstr ""
 
-#: templates/base.html:222
+#: templates/base.html:231
 msgid "People"
 msgstr ""
 
-#: templates/base.html:240
+#: templates/base.html:249
 msgid "Language"
 msgstr ""
 
-#: templates/base.html:274 templates/base.html.py:275
+#: templates/base.html:283 templates/base.html.py:284
 msgid "Username"
 msgstr ""
 
-#: templates/base.html:278
+#: templates/base.html:287
 msgid "Password"
 msgstr ""
 
-#: templates/base.html:282
+#: templates/base.html:291
 msgid "Remember Me"
 msgstr ""
 
-#: templates/base.html:298
+#: templates/base.html:307
 msgid "Profile Menu"
 msgstr ""
 
-#: templates/base.html:302
+#: templates/base.html:311
 msgid "Upload Layers"
 msgstr ""
 
-#: templates/base.html:304
+#: templates/base.html:313
 msgid "Profile"
 msgstr ""
 
-#: templates/base.html:305
+#: templates/base.html:314
 msgid "Recent Activity"
 msgstr ""
 
-#: templates/base.html:306
+#: templates/base.html:315
 msgid "Inbox"
 msgstr ""
 
-#: templates/base.html:308
+#: templates/base.html:317
 msgid "Notifications"
 msgstr ""
 
-#: templates/base.html:311
+#: templates/base.html:320
 msgid "Announcements"
 msgstr ""
 
-#: templates/base.html:314
+#: templates/base.html:323
 msgid "Remote Services"
 msgstr ""
 
-#: templates/base.html:315
+#: templates/base.html:324
 msgid "Invite User"
 msgstr ""
 
-#: templates/base.html:317
+#: templates/base.html:326
 msgid "GeoServer"
 msgstr ""
 
-#: templates/base.html:320
+#: templates/base.html:329
 msgid "Admin"
 msgstr ""
 
-#: templates/base.html:329 templates/zinnia/base.html:104
+#: templates/base.html:338 templates/zinnia/base.html:104
 #: templates/zinnia/base.html.py:105
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:367
+#: templates/base.html:376
 msgid "Type your search here ..."
 msgstr ""
 
@@ -195,31 +203,31 @@ msgstr ""
 msgid "Welcome!"
 msgstr ""
 
-#: templates/index.html:15 templates/site_index.html:23
-#: templates/site_index.html.py:105
+#: templates/index.html:15 templates/site_index.html:24
+#: templates/site_index.html.py:107
 msgid "Welcome"
 msgstr ""
 
-#: templates/index.html:16 templates/site_index.html:29
-#: templates/site_index.html.py:106
+#: templates/index.html:16 templates/site_index.html:30
+#: templates/site_index.html.py:108
 msgid ""
 "GeoNode is an open source platform for sharing geospatial data and maps."
 msgstr ""
 
-#: templates/index.html:17 templates/site_index.html:30
-#: templates/site_index.html.py:107
+#: templates/index.html:17 templates/site_index.html:31
+#: templates/site_index.html.py:109
 msgid ""
 "If you have any questions about the software or service, join our <a href="
 "\"https://groups.google.com/d/forum/geonode-users\">mailing list</a>."
 msgstr ""
 
-#: templates/index.html:18 templates/site_index.html:31
-#: templates/site_index.html.py:108
+#: templates/index.html:18 templates/site_index.html:32
+#: templates/site_index.html.py:110
 msgid "Need help?"
 msgstr ""
 
-#: templates/index.html:18 templates/site_index.html:31
-#: templates/site_index.html.py:108
+#: templates/index.html:18 templates/site_index.html:32
+#: templates/site_index.html.py:110
 msgid "Getting Started"
 msgstr ""
 
@@ -228,7 +236,7 @@ msgstr ""
 msgid "No"
 msgstr "0"
 
-#: templates/index.html:31 templates/site_index.html:86
+#: templates/index.html:31 templates/site_index.html:88
 msgid "Layer"
 msgid_plural "Layers"
 msgstr[0] "Layer"
@@ -240,11 +248,11 @@ msgid ""
 "and public sources. Download data in standard formats."
 msgstr ""
 
-#: templates/index.html:35 templates/site_index.html:50
+#: templates/index.html:35 templates/site_index.html:51
 msgid "Explore Layers"
 msgstr ""
 
-#: templates/index.html:41 templates/site_index.html:89
+#: templates/index.html:41 templates/site_index.html:91
 msgid "Map"
 msgid_plural "Maps"
 msgstr[0] "Peta"
@@ -256,17 +264,17 @@ msgid ""
 "which can be shared publicly or restricted to specific users only."
 msgstr ""
 
-#: templates/index.html:45 templates/site_index.html:65
+#: templates/index.html:45 templates/site_index.html:66
 msgid "Create maps"
 msgstr ""
 
-#: templates/index.html:52 templates/site_index.html:95
+#: templates/index.html:52 templates/site_index.html:97
 msgid "User"
 msgid_plural "Users"
 msgstr[0] "Pengguna"
 msgstr[1] "Pengguna"
 
-#: templates/index.html:55 templates/site_index.html:92
+#: templates/index.html:55 templates/site_index.html:94
 msgid "Document"
 msgid_plural "Documents"
 msgstr[0] "Dokumen"
@@ -276,7 +284,7 @@ msgstr[1] "Dokumen"
 msgid "Upload and share documents in various formats."
 msgstr "Unggah dan berbagi dokumen dalam berbagai format."
 
-#: templates/index.html:59 templates/site_index.html:62
+#: templates/index.html:59 templates/site_index.html:63
 msgid ""
 "GeoNode allows registered users to easily upload geospatial data in several "
 "formats including shapefile and GeoTiff."
@@ -286,13 +294,13 @@ msgstr ""
 msgid "Share data"
 msgstr "Berbagi data"
 
-#: templates/site_index.html:24
+#: templates/site_index.html:25
 msgid ""
 "Sistem Informasi Pembangunan Daerah Kabupaten Banyuasin <br>(SIMBANGDA "
 "Banyuasin)"
 msgstr ""
 
-#: templates/site_index.html:47
+#: templates/site_index.html:48
 msgid ""
 "Click to search for geospatial data published by other users, organizations "
 "and public sources."
@@ -300,12 +308,12 @@ msgstr ""
 "Klik untuk mencari data geospasial yang diterbitkan oleh pengguna lain, "
 "organisasi dan sumber-sumber publik."
 
-#: templates/site_index.html:48
+#: templates/site_index.html:49
 msgid "Download data in standard formats."
 msgstr "Download data dalam format standar."
 
-#: templates/site_index.html:86 templates/site_index.html.py:89
-#: templates/site_index.html:92 templates/site_index.html.py:95
+#: templates/site_index.html:88 templates/site_index.html.py:91
+#: templates/site_index.html:94 templates/site_index.html.py:97
 msgid "0"
 msgstr ""
 
@@ -379,6 +387,9 @@ msgstr ""
 #: templates/zinnia/base.html:96 templates/zinnia/base.html.py:97
 msgid "Post an entry"
 msgstr ""
+
+#~ msgid "Other"
+#~ msgstr "Lainnya"
 
 #~ msgid "%(the_page.title)s"
 #~ msgstr "Tentang"
