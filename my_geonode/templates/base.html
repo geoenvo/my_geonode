@@ -219,7 +219,7 @@
               -->
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-8">
             <!--
             {% trans "Powered by" %} <a href="http://geonode.org">{% trans "GeoNode" %}</a> <em>{% trans "version" %} {{ VERSION }}</em> |
             <a href="{% url "developer" %}">{% trans "Developers" %}</a> |
@@ -245,6 +245,7 @@
             {% endfor %}
             </ul>
           </div>
+          <!-- 20151016 hide language switcher and fill its space with flatpages
           <div class="col-md-4">
             <label class="hidden">{% trans "Language" %}</label>
             {% if csrf_token != "NOTPROVIDED" %}
@@ -261,6 +262,7 @@
             </form>
             {% endif %}
           </div>
+          -->
         </div>
       </div>
     </footer>
