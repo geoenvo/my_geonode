@@ -44,8 +44,8 @@ $(function() {
     $('#permission_form input#change_layer_style_groups').val('Pengelola-Basis-Data');
     $('#permission_form input#manage_resourcebase_groups').val('Pengelola-Basis-Data');
     
-    // set default date_type to creation
-    $('#form_metadata [name="resource-date_type"] option[value="creation"]').attr('selected', 'selected');
+    // 20151019 set default date_type to publication
+    $('#form_metadata [name="resource-date_type"] option[value="publication"]').attr('selected', 'selected');
     
     // set Indonesian as default language metadata
     $('#form_metadata [name="resource-language"] option[value="ind"]').attr('selected', 'selected');
@@ -72,7 +72,8 @@ $(function() {
         var requiredFieldNames = [
           'resource-title',
           //'resource-edition', # replaced by icraf_dr_date_created
-          'icraf_dr_date_created',
+          //'icraf_dr_date_created', // 20151019 field label is actually "date published"
+          'icraf_dr_date_published', // 20151019 field label is actually "date created"
           'icraf_dr_source',
           'resource-abstract',
           'resource-regions',
