@@ -35,7 +35,8 @@ $(function() {
         var requiredFieldNames = [
           'resource-title',
           //'resource-edition', # replaced by icraf_dr_date_created
-          'icraf_dr_date_created',
+          //'icraf_dr_date_created', // 20151019 field label is actually "date published"
+          'icraf_dr_date_published', // 20151019 field label is actually "date created"
           'icraf_dr_source',
           'resource-abstract',
           'resource-regions',
